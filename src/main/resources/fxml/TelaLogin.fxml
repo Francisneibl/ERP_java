@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="329.0" prefWidth="544.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.francisnei.controllers.TelaLoginController">
+   <children>
+      <ImageView fitHeight="105.0" fitWidth="248.0" layoutX="165.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icons/logo.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="textFieldUsuario" alignment="TOP_LEFT" focusColor="#e45c84" layoutX="130.0" layoutY="137.0" prefHeight="25.0" prefWidth="312.0" promptText="Usuario" unFocusColor="#e45c84fc" />
+      <JFXPasswordField fx:id="textFieldSenha" focusColor="#e45c84" layoutX="130.0" layoutY="189.0" prefHeight="25.0" prefWidth="312.0" promptText="Senha" unFocusColor="#e45c84" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="100.0" layoutY="133.0">
+         <image>
+            <Image url="@../icons/avatar.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="99.0" layoutY="185.0">
+         <image>
+            <Image url="@../icons/lock.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="102.0" layoutY="249.0" prefHeight="38.0" prefWidth="340.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton fx:id="buttonSair" onAction="#handleOnActionSair" prefHeight="25.0" prefWidth="181.0" text="Sair" textFill="#e45c84" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="buttonLogin" onAction="#handleOnActionLogin" prefHeight="25.0" prefWidth="180.0" text="Login" textFill="#e45c84">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

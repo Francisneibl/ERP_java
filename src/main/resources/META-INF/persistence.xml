@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="DatabasePU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>br.com.francisnei.testedependencia.Aluno</class>
+    <class>br.com.francisnei.dado.Pais</class>
+    <class>br.com.francisnei.dado.Cidade</class>
+    <class>br.com.francisnei.dado.Estado</class>
+    <class>br.com.francisnei.dado.Aluno</class>
+    <class>br.com.francisnei.dado.Saida</class>
+    <class>br.com.francisnei.dado.Endereco</class>
+    <class>br.com.francisnei.dado.Subcategoria</class>
+    <class>br.com.francisnei.dado.Produto</class>
+    <class>br.com.francisnei.dado.EstoqueHasProduto</class>
+    <class>br.com.francisnei.dado.Estoque</class>
+    <class>br.com.francisnei.dado.ProdutoHasSaida</class>
+    <class>br.com.francisnei.dado.Pessoa</class>
+    <class>br.com.francisnei.dado.Cor</class>
+    <class>br.com.francisnei.dado.Telefone</class>
+    <class>br.com.francisnei.dado.Categoria</class>
+    <class>br.com.francisnei.dado.Marca</class>
+    <class>br.com.francisnei.dado.Pessoafisica</class>
+    <class>br.com.francisnei.dado.Usuario</class>
+    <class>br.com.francisnei.dado.Entrada</class>
+    <class>br.com.francisnei.dado.EntradaHasProduto</class>
+    <class>br.com.francisnei.dado.Pessoajuridica</class>
+    <class>br.com.francisnei.dado.Fornecedor</class>
+    <properties>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:1234/valimfashion?useTimezone=true&amp;serverTimezone=UTC"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB53Dialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+  </persistence-unit>
+</persistence>

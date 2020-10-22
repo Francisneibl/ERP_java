@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPanePrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.francisnei.controllers.TelaPrincipalController">
+   <children>
+      <BorderPane prefHeight="521.0" prefWidth="726.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: white; -fx-background-image: url('file:/C:/Users/Francisnei_Lima/Desktop/Projeto%20ValimFashion/img/logo.png'); -fx-background-repeat: no-repeat; -fx-background-position: center; -fx-background-size: 400;" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
+                     <bottom>
+                        <GridPane alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="TOP_RIGHT" contentDisplay="TOP" prefHeight="17.0" prefWidth="66.0" text="USUARIO:" textFill="#e45c84">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="75.0" textFill="#e45c84" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="50.0" style="-fx-background-color: pink;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" ripplerFill="#e45d84" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fx:id="buttonHome" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <MenuButton fx:id="menuProdutos" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" popupSide="RIGHT" style="-fx-background-color: transparent;" text="MenuButton" translateX="5.0">
+                    <items>
+                      <MenuItem fx:id="menuItemCadastrarProdutos" mnemonicParsing="false" onAction="#handleCadastrarProdutos" text="Cadastrar Produto" />
+                      <MenuItem fx:id="menuItemListarProdutos" mnemonicParsing="false" onAction="#handleListarProdutos" text="Manutenção de Estoque" />
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/package.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Produtos" />
+                     </tooltip>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </MenuButton>
+                  <MenuButton fx:id="menuVendas" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" mnemonicParsing="false" popupSide="RIGHT" style="-fx-background-color: transparent;" translateX="5.0">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Nova Venda" />
+                        <MenuItem mnemonicParsing="false" text="Cancelar Venda" />
+                      <MenuItem mnemonicParsing="false" text="Historico De Vendas" />
+                    </items>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <tooltip>
+                        <Tooltip text="Vendas" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/sell.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+                  <MenuButton fx:id="menuRelatorios" alignment="TOP_LEFT" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" popupSide="RIGHT" prefHeight="33.0" prefWidth="79.0" style="-fx-background-color: transparent;" text="MenuButton" textFill="#e45c84" translateX="5.0">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Relatorios de Vendas" />
+                      <MenuItem mnemonicParsing="false" text="Relatorio de Estoque" />
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" translateX="3.0">
+                           <image>
+                              <Image url="@../icons/list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                     <tooltip>
+                        <Tooltip text="Relatorios" />
+                     </tooltip>
+                  </MenuButton>
+                  <JFXButton fx:id="buttonLogin" contentDisplay="GRAPHIC_ONLY" ripplerFill="#e45c84">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icons/lock.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
